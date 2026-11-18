@@ -13,6 +13,7 @@
     geeqie
     gimp gimpPlugins.gmic
     imgbrd-grabber
+    jellyfin
     libreoffice-qt6
     mpv
     obs-studio
