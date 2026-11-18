@@ -52,7 +52,7 @@ in
   # VA-API transcoding works via hardware.graphics (host.nix).
   ############################################################
   services.jellyfin = {
-    enable = false;
+    enable = true;
     openFirewall = true;      # opens 8096 (http) and 8920 (https)
     user = "jellyfin";
     group = "jellyfin";
