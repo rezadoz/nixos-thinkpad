@@ -8,6 +8,7 @@ _  /   / /_/ /_  / / / /_/ /_  /_/ / /_/ / /_/ // /_
 ```
 
 ## changelog
+* **xlibre + bspwm**: X server swapped for [XLibre](https://github.com/X11Libre/xserver) via the `xlibre-nixos` overlay (`xlibre.nix`); +bspwm session with sxhkd, polybar, picom, dunst, i3lock (`bspwm.nix`, `bspwm-home.nix`)
 * **runabout installer**: +`disko.nix` (LUKS2 + btrfs subvolumes), +`installer.nix` offline install USB
 * **runabout port**: forked from `uss-enterprise` for the ThinkPad L460 — systemd-boot (ESP at `/bios`, 32 entries), Intel HD 520 VA-API, TLP/thermald, user `bryan`, Jellyfin/nginx off
 * **26.11.20260919.20b1ddd**: +jogger
@@ -41,10 +42,13 @@ _  /   / /_/ /_  / / / /_/ /_  /_/ / /_/ / /_/ // /_
 ├── packages.nix
 ├── README.md
 ├── services.nix
+├── xlibre.nix          # XLibre overlay (X.Org replacement)
+├── bspwm.nix           # bspwm session (system side)
+├── bspwm-home.nix      # bspwmrc / sxhkdrc / polybar (home-manager)
 ├── update.sh       # alias = update
 └── zsh.nix
 
-2 directories, 19 files
+2 directories, 22 files
 ```
 
 ## specs
@@ -53,8 +57,8 @@ bryan@runabout
 --------------
 OS: 26.11 (Zokor) x86_64
 Host: Lenovo ThinkPad L460
-DE: KDE Plasma
-WM: KWin (Wayland)
+DE: KDE Plasma / bspwm
+WM: KWin (Wayland), bspwm (X11 on XLibre)
 CPU: Intel Core i5-6200U @ 2.80 GHz
 GPU: Intel HD Graphics 520 [Integrated]
 Boot: systemd-boot (UEFI, ESP at /bios)

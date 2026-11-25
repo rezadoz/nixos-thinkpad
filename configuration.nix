@@ -9,6 +9,8 @@
       ./networking.nix
       ./packages.nix
       ./services.nix
+      ./xlibre.nix              # XLibre in place of the X.Org server (overlay, see flake.nix)
+      ./bspwm.nix               # bspwm X11 session (user config: bspwm-home.nix)
     ];
 
   # runabout boots UEFI + systemd-boot, with the ESP mounted at /bios
@@ -41,6 +43,8 @@
   };
 
   # Desktop (display stack stays here; daemons live in services.nix)
+  # The X server here is XLibre (xlibre.nix). SDDM lists Plasma (Wayland),
+  # Plasma (X11) and bspwm (bspwm.nix).
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;

@@ -6,6 +6,7 @@
 {
   imports = [
     ./zsh.nix
+    ./bspwm-home.nix   # bspwmrc, sxhkdrc, polybar (session enabled in bspwm.nix)
   ];
 
   home.username = "bryan";

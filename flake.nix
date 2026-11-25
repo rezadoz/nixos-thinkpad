@@ -22,6 +22,13 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # XLibre (X.Org fork) for NixOS — a plain overlay, not a flake.
+    # Pulled in by xlibre.nix. Bump with `nix flake update xlibre-nixos`.
+    xlibre-nixos = {
+      url = "github:r1w1s1/xlibre-nixos";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, disko, ... }@inputs:
