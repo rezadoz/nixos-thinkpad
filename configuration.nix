@@ -47,6 +47,7 @@
   # Plasma (X11) and bspwm (bspwm.nix).
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
+  #services.displayManager.sddm.wayland.enable = false;   # X11 greeter: X runs as root, the well-tested path
   services.desktopManager.plasma6.enable = true;
   services.xserver.xkb = {
     layout = "us";
