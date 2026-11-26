@@ -9,8 +9,8 @@
       ./networking.nix
       ./packages.nix
       ./services.nix
-      ./xlibre.nix              # XLibre in place of the X.Org server (overlay, see flake.nix)
-      ./bspwm.nix               # bspwm X11 session (user config: bspwm-home.nix)
+#      ./xlibre.nix              # XLibre in place of the X.Org server (overlay, see flake.nix)
+#       ./bspwm.nix               # bspwm X11 session (user config: bspwm-home.nix)
     ];
 
   # runabout boots UEFI + systemd-boot, with the ESP mounted at /bios
